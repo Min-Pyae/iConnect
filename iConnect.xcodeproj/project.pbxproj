@@ -11,6 +11,10 @@
 		F11FD1752B9A72CC00AEAACB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11FD1742B9A72CC00AEAACB /* ContentView.swift */; };
 		F11FD1772B9A72CD00AEAACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11FD1762B9A72CD00AEAACB /* Assets.xcassets */; };
 		F11FD17A2B9A72CD00AEAACB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11FD1792B9A72CD00AEAACB /* Preview Assets.xcassets */; };
+		F19439F02B9BC0DA002FA4AB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19439EF2B9BC0DA002FA4AB /* LoginView.swift */; };
+		F19439F22B9BC59D002FA4AB /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19439F12B9BC59D002FA4AB /* RegistrationView.swift */; };
+		F19439F52B9BC791002FA4AB /* AuthenticationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19439F42B9BC791002FA4AB /* AuthenticationButton.swift */; };
+		F19439F92B9BC8D9002FA4AB /* AuthenticationTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19439F82B9BC8D9002FA4AB /* AuthenticationTextFieldModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		F11FD1742B9A72CC00AEAACB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F11FD1762B9A72CD00AEAACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F11FD1792B9A72CD00AEAACB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F19439EF2B9BC0DA002FA4AB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F19439F12B9BC59D002FA4AB /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		F19439F42B9BC791002FA4AB /* AuthenticationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButton.swift; sourceTree = "<group>"; };
+		F19439F82B9BC8D9002FA4AB /* AuthenticationTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextFieldModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,10 @@
 		F11FD1712B9A72CC00AEAACB /* iConnect */ = {
 			isa = PBXGroup;
 			children = (
+				F19439F32B9BC765002FA4AB /* Components */,
+				F19439ED2B9BC07E002FA4AB /* Model */,
+				F19439EC2B9BC076002FA4AB /* ViewModel */,
+				F19439EB2B9BC070002FA4AB /* View */,
 				F11FD1722B9A72CC00AEAACB /* iConnectApp.swift */,
 				F11FD1742B9A72CC00AEAACB /* ContentView.swift */,
 				F11FD1762B9A72CD00AEAACB /* Assets.xcassets */,
@@ -65,6 +77,46 @@
 				F11FD1792B9A72CD00AEAACB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F19439EB2B9BC070002FA4AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F19439EE2B9BC095002FA4AB /* Authentication */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F19439EC2B9BC076002FA4AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F19439ED2B9BC07E002FA4AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F19439EE2B9BC095002FA4AB /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F19439EF2B9BC0DA002FA4AB /* LoginView.swift */,
+				F19439F12B9BC59D002FA4AB /* RegistrationView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F19439F32B9BC765002FA4AB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F19439F42B9BC791002FA4AB /* AuthenticationButton.swift */,
+				F19439F82B9BC8D9002FA4AB /* AuthenticationTextFieldModifier.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19439F92B9BC8D9002FA4AB /* AuthenticationTextFieldModifier.swift in Sources */,
+				F19439F02B9BC0DA002FA4AB /* LoginView.swift in Sources */,
 				F11FD1752B9A72CC00AEAACB /* ContentView.swift in Sources */,
+				F19439F52B9BC791002FA4AB /* AuthenticationButton.swift in Sources */,
 				F11FD1732B9A72CC00AEAACB /* iConnectApp.swift in Sources */,
+				F19439F22B9BC59D002FA4AB /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

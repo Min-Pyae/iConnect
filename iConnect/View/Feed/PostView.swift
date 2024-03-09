@@ -15,12 +15,7 @@ struct PostView: View {
             HStack(alignment: .top) {
                 
                 // PROFILE IMAGE
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
-                
+                CircularImageView()
                 
                 VStack(alignment: .leading, spacing: 5) {
                     
@@ -38,7 +33,7 @@ struct PostView: View {
                             .font(.caption)
                             .foregroundStyle(Color(.systemGray3))
                         
-                        // BUTTON
+                        // EDIT BUTTON
                         Button(action: {
                             
                         }, label: {
@@ -48,12 +43,13 @@ struct PostView: View {
                         
                     }
                     
-                    // POST TEXT
+                    // POST TEXTS
                     Text("Hello! I am an iOS Engineer.")
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
                     
+                    // POST ACTIONS
                     HStack(spacing: 16) {
                         Button(action: {
                             

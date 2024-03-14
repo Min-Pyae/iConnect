@@ -6,6 +6,8 @@
 //
 
 import Firebase
+import FirebaseFirestoreSwift
+
 
 class AuthService {
     
@@ -25,7 +27,6 @@ class AuthService {
             
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
-            print(result)
             
         } catch {
             
@@ -42,7 +43,7 @@ class AuthService {
             
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
-            print(result)
+            try await uploadUserData(id: result.user.uid, email: email, fullname: fullname, username: username)
             
         } catch {
             
@@ -60,6 +61,15 @@ class AuthService {
         
         // Remove User Session
         self.userSession = nil
+    }
+    
+    
+    // FUNCTION FOR UPLOADING USER DATA TO FIRESTORE
+    @MainActor
+    private func uploadUserData(id: String, email: String, fullname: String, username: String) async throws {
+        let user = User(id: id, email: email, fullname: fullname, username: username)
+        guard let userData = try? Firestore.Encoder().encode(user) else { return }
+        try await Firestore.firestore().collection("users").document(id).setData(userData)
     }
     
 }

@@ -20,6 +20,9 @@
 		F12C2F462BA2159C000D5344 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C2F452BA2159C000D5344 /* ContentViewModel.swift */; };
 		F12C2F492BA2169F000D5344 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C2F482BA2169F000D5344 /* HomeView.swift */; };
 		F12C2F4B2BA21A2C000D5344 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C2F4A2BA21A2C000D5344 /* LoginViewModel.swift */; };
+		F17105952BA336A700835E2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17105942BA336A700835E2A /* User.swift */; };
+		F17105972BA338A100835E2A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17105962BA338A100835E2A /* UserService.swift */; };
+		F17105992BA339F200835E2A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17105982BA339F200835E2A /* ProfileViewModel.swift */; };
 		F19439F02B9BC0DA002FA4AB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19439EF2B9BC0DA002FA4AB /* LoginView.swift */; };
 		F19439F22B9BC59D002FA4AB /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19439F12B9BC59D002FA4AB /* RegistrationView.swift */; };
 		F19439F52B9BC791002FA4AB /* AuthenticationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19439F42B9BC791002FA4AB /* AuthenticationButton.swift */; };
@@ -71,6 +74,9 @@
 		F12C2F452BA2159C000D5344 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		F12C2F482BA2169F000D5344 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F12C2F4A2BA21A2C000D5344 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F17105942BA336A700835E2A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F17105962BA338A100835E2A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F17105982BA339F200835E2A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		F19439EF2B9BC0DA002FA4AB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F19439F12B9BC59D002FA4AB /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		F19439F42B9BC791002FA4AB /* AuthenticationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButton.swift; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 				F12C2F452BA2159C000D5344 /* ContentViewModel.swift */,
 				F12C2F4A2BA21A2C000D5344 /* LoginViewModel.swift */,
 				F1D478882B9DACA700E6FE1F /* RegistrationViewModel.swift */,
+				F17105982BA339F200835E2A /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 		F19439ED2B9BC07E002FA4AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F17105942BA336A700835E2A /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				F1D478862B9DAC5700E6FE1F /* AuthService.swift */,
+				F17105962BA338A100835E2A /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -365,7 +374,10 @@
 				F12C2F4B2BA21A2C000D5344 /* LoginViewModel.swift in Sources */,
 				F11FD1752B9A72CC00AEAACB /* ContentView.swift in Sources */,
 				F19439F52B9BC791002FA4AB /* AuthenticationButton.swift in Sources */,
+				F17105972BA338A100835E2A /* UserService.swift in Sources */,
+				F17105992BA339F200835E2A /* ProfileViewModel.swift in Sources */,
 				F11FD1732B9A72CC00AEAACB /* iConnectApp.swift in Sources */,
+				F17105952BA336A700835E2A /* User.swift in Sources */,
 				F12C2F492BA2169F000D5344 /* HomeView.swift in Sources */,
 				F19439F22B9BC59D002FA4AB /* RegistrationView.swift in Sources */,
 				F12C2F462BA2159C000D5344 /* ContentViewModel.swift in Sources */,

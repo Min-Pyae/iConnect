@@ -10,7 +10,12 @@ import SwiftUI
 struct UploadPostView: View {
     
     @State private var postCaption = ""
+    @StateObject var viewModel = UploadPostViewModel()
     @Environment(\.dismiss) var dismiss
+    
+    private var user: User? {
+        return UserService.shared.currentUser
+    }
     
     var body: some View {
         
@@ -21,7 +26,7 @@ struct UploadPostView: View {
                 HStack(alignment: .top) {
                     
                     // PROFILE IMAGE VIEW
-                    CircularImageView(user: nil, size: .small)
+                    CircularImageView(user: user, size: .small)
                     
                     // POST CREATION TEXT FIELD
                     VStack(alignment: .leading, spacing: 5) {
@@ -69,7 +74,10 @@ struct UploadPostView: View {
                 // CANCEL BUTTON
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Post") {
-                        
+                        Task {
+                            try await viewModel.uploadPost(caption: postCaption)
+                            dismiss()
+                        }
                     }
                     .opacity(postCaption.isEmpty ? 0.5 : 1.0)
                     .disabled(postCaption.isEmpty)

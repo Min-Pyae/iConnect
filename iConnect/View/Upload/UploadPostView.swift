@@ -21,7 +21,7 @@ struct UploadPostView: View {
                 HStack(alignment: .top) {
                     
                     // PROFILE IMAGE VIEW
-                    CircularImageView()
+                    CircularImageView(user: nil, size: .small)
                     
                     // POST CREATION TEXT FIELD
                     VStack(alignment: .leading, spacing: 5) {

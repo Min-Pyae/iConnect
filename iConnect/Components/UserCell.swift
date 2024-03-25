@@ -15,7 +15,7 @@ struct UserCell: View {
         HStack {
             
             // PRPFILE IMAGE
-            CircularImageView()
+            CircularImageView(user: user, size: .small)
             
             
             // USER NAME

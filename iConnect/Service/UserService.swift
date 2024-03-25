@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 
 
 class UserService {
-    @Published var currentUsers: User?
+    @Published var currentUser: User?
     
     static let shared = UserService()
     
@@ -31,7 +31,7 @@ class UserService {
         let snapshot = try await Firestore.firestore().collection("users").document(uid).getDocument()
         
         let user = try snapshot.data(as: User.self)
-        self.currentUsers = user
+        self.currentUser = user
         
     }
     
@@ -50,6 +50,15 @@ class UserService {
     
     
     func resetCurrentUser() {
-        self.currentUsers = nil
+        self.currentUser = nil
+    }
+    
+    @MainActor
+    func updateUserProfileImage(withImageUrl imageUrl: String) async throws {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        try await Firestore.firestore().collection("users").document(currentUid).updateData([
+            "profileImageUrl": imageUrl
+        ])
+        self.currentUser?.profileImageUrl = imageUrl
     }
 }

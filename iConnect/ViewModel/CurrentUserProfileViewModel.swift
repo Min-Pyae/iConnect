@@ -7,6 +7,8 @@
 
 import Foundation
 import Combine
+import PhotosUI
+import SwiftUI
 
 
 class CurrentUserProfileViewModel: ObservableObject {
@@ -20,9 +22,11 @@ class CurrentUserProfileViewModel: ObservableObject {
     
     
     private func setUpSubscribers() {
-        UserService.shared.$currentUsers.sink { [weak self] user in
+        UserService.shared.$currentUser.sink { [weak self] user in
             self?.currentUser = user
             
         }.store(in: &cancellables)
     }
+    
+    
 }

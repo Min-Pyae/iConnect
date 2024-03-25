@@ -15,7 +15,7 @@ struct PostView: View {
             HStack(alignment: .top) {
                 
                 // PROFILE IMAGE
-                CircularImageView()
+                CircularImageView(size: .small)
                 
                 VStack(alignment: .leading, spacing: 5) {
                     

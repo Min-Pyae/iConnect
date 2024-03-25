@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct EditProfileView: View {
     
+    let user: User
     @State private var bioText = ""
     @State private var linkText = ""
     @State private var isPrivateProfile = false
+    @Environment(\.dismiss) var dismiss
+    @StateObject var viewModel = EditProfileViewModel()
     
     var body: some View {
         
@@ -29,12 +33,22 @@ struct EditProfileView: View {
                             Text("Name")
                                 .fontWeight(.semibold)
                             
-                            Text("Chris Min")
+                            Text(user.fullname)
                         }
                         
                         Spacer()
                         
-                        CircularImageView()
+                        PhotosPicker(selection: $viewModel.selectedItem) {
+                            if let image = viewModel.profileImage {
+                                image
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
+                            } else {
+                                CircularImageView(user: user, size: .medium)
+                            }
+                        }
                     }
                     
                     
@@ -55,7 +69,7 @@ struct EditProfileView: View {
                     
                     // LINK
                     VStack(alignment: .leading) {
-                        Text("Linnk")
+                        Text("Link")
                             .fontWeight(.semibold)
                         
                         TextField("Add link", text: $linkText, axis: .vertical)
@@ -85,7 +99,7 @@ struct EditProfileView: View {
                 // CANCEL BUTTON
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel") {
-                        
+                        dismiss()
                     }
                     .font(.subheadline)
                     .foregroundStyle(.cyan)
@@ -94,7 +108,10 @@ struct EditProfileView: View {
                 // DONE BUTTON
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Done") {
-                        
+                        Task {
+                            try await viewModel.updateUserData()
+                            dismiss()
+                        }
                     }
                     .font(.subheadline)
                     .foregroundStyle(.cyan)
@@ -106,5 +123,5 @@ struct EditProfileView: View {
 }
 
 #Preview {
-    EditProfileView()
+    EditProfileView(user: DeveloperPreview.shared.user)
 }

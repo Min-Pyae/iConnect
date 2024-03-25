@@ -9,14 +9,15 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var selectedTab = 0
+    @State private var selectedTab = 0
+    @State private var showUploadView = false
     
     var body: some View {
         
         TabView(selection: $selectedTab) {
             
             // FEED VIEW
-            Text("Tab Content 1")
+            FeedView()
                 .tabItem {
                     Image(systemName: selectedTab == 0 ? "house.fill" : "house")
                         .environment(\.symbolVariants, selectedTab == 0 ? .fill : .none)
@@ -28,7 +29,7 @@ struct HomeView: View {
             
             
             // EXPLORE VIEW
-            Text("Tab Content 1")
+            ExploreView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                 }
@@ -39,7 +40,7 @@ struct HomeView: View {
             
             
             // UPLOAD VIEW
-            Text("Tab Content 1")
+            Text("")
                 .tabItem {
                     Image(systemName: "plus")
                 }
@@ -62,7 +63,7 @@ struct HomeView: View {
             
             
             // PROFILE VIEW
-            Text("Tab Content 1")
+            ProfileView()
                 .tabItem {
                     Image(systemName: selectedTab == 4 ? "person.fill" : "person")
                         .environment(\.symbolVariants, selectedTab == 4 ? .fill : .none)
@@ -71,9 +72,22 @@ struct HomeView: View {
                     selectedTab = 4
                 }
                 .tag(4)
-        
+            
         }
+        .onChange(of: selectedTab, { oldValue, newValue in
+            showUploadView = selectedTab == 2
+        })
+        .sheet(
+            isPresented: $showUploadView,
+            onDismiss: {
+                selectedTab = 0
+            },
+            content: {
+                UploadPostView()
+            }
+        )
         .tint(.cyan)
+        
         
     }
 }

@@ -84,24 +84,20 @@ struct EditProfileView: View {
             .toolbar {
                 // CANCEL BUTTON
                 ToolbarItem(placement: .topBarLeading) {
-                    Button(action: {
+                    Button("Cancel") {
                         
-                    }, label: {
-                        Text("Cancel")
-                            .font(.subheadline)
-                            .foregroundStyle(.cyan)
-                    })
+                    }
+                    .font(.subheadline)
+                    .foregroundStyle(.cyan)
                 }
                 
                 // DONE BUTTON
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
+                    Button("Done") {
                         
-                    }, label: {
-                        Text("Done")
-                            .font(.subheadline)
-                            .foregroundStyle(.cyan)
-                    })
+                    }
+                    .font(.subheadline)
+                    .foregroundStyle(.cyan)
                 }
             }
             

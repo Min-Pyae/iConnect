@@ -58,6 +58,7 @@
 		F1D478872B9DAC5700E6FE1F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D478862B9DAC5700E6FE1F /* AuthService.swift */; };
 		F1D478892B9DACA700E6FE1F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D478882B9DACA700E6FE1F /* RegistrationViewModel.swift */; };
 		F1F7A7342BB0FCE70022E08D /* ProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F7A7332BB0FCE70022E08D /* ProfileTab.swift */; };
+		F1F7A7362BB101950022E08D /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F7A7352BB101950022E08D /* EditProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		F1D478862B9DAC5700E6FE1F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F1D478882B9DACA700E6FE1F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		F1F7A7332BB0FCE70022E08D /* ProfileTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTab.swift; sourceTree = "<group>"; };
+		F1F7A7352BB101950022E08D /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				F12449512B9CFAC500AF1FD8 /* ProfileView.swift */,
+				F1F7A7352BB101950022E08D /* EditProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				F12C2F4B2BA21A2C000D5344 /* LoginViewModel.swift in Sources */,
 				F11FD1752B9A72CC00AEAACB /* ContentView.swift in Sources */,
 				F19439F52B9BC791002FA4AB /* AuthenticationButton.swift in Sources */,
+				F1F7A7362BB101950022E08D /* EditProfileView.swift in Sources */,
 				F17105972BA338A100835E2A /* UserService.swift in Sources */,
 				F17105992BA339F200835E2A /* ProfileViewModel.swift in Sources */,
 				F11FD1732B9A72CC00AEAACB /* iConnectApp.swift in Sources */,

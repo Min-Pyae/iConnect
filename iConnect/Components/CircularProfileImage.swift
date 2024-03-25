@@ -14,6 +14,7 @@ struct CircularImageView: View {
             .scaledToFill()
             .frame(width: 40, height: 40)
             .clipShape(Circle())
+            .foregroundStyle(.black)
     }
 }
 

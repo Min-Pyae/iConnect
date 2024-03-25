@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct UserCell: View {
+    
+    var user: User
+    
     var body: some View {
         HStack {
             
@@ -16,14 +19,15 @@ struct UserCell: View {
             
             
             // USER NAME
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 4) {
                 
-                Text("johnwick")
+                Text(user.username)
                     .fontWeight(.semibold)
                 
-                Text("John Wick")
+                Text(user.fullname)
                 
             }
+            .foregroundStyle(.black)
             .font(.footnote)
             
             
@@ -51,5 +55,5 @@ struct UserCell: View {
 }
 
 #Preview {
-    UserCell()
+    UserCell(user: DeveloperPreview.shared.user)
 }

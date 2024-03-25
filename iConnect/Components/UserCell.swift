@@ -38,10 +38,11 @@ struct UserCell: View {
                 .overlay {
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(
-                            Color(.systemGray3),
+                            Color(.cyan),
                             lineWidth: 1
                         )
                 }
+                .foregroundStyle(.cyan)
             
         }
         .padding(.horizontal)

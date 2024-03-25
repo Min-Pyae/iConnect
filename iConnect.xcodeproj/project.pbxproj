@@ -57,6 +57,7 @@
 		F1D478842B9DA8EE00E6FE1F /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F1D478832B9DA8EE00E6FE1F /* FirebaseStorageCombine-Community */; };
 		F1D478872B9DAC5700E6FE1F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D478862B9DAC5700E6FE1F /* AuthService.swift */; };
 		F1D478892B9DACA700E6FE1F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D478882B9DACA700E6FE1F /* RegistrationViewModel.swift */; };
+		F1F7A7342BB0FCE70022E08D /* ProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F7A7332BB0FCE70022E08D /* ProfileTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		F1D4784C2B9DA7DD00E6FE1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1D478862B9DAC5700E6FE1F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F1D478882B9DACA700E6FE1F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		F1F7A7332BB0FCE70022E08D /* ProfileTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				F17105942BA336A700835E2A /* User.swift */,
+				F1F7A7332BB0FCE70022E08D /* ProfileTab.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				F12449462B9C518000AF1FD8 /* FeedView.swift in Sources */,
 				F124494B2B9CF6AB00AF1FD8 /* ExploreView.swift in Sources */,
 				F19439F92B9BC8D9002FA4AB /* AuthenticationTextFieldModifier.swift in Sources */,
+				F1F7A7342BB0FCE70022E08D /* ProfileTab.swift in Sources */,
 				F1D478892B9DACA700E6FE1F /* RegistrationViewModel.swift in Sources */,
 				F12449482B9C519D00AF1FD8 /* PostView.swift in Sources */,
 				F12449522B9CFAC500AF1FD8 /* ProfileView.swift in Sources */,

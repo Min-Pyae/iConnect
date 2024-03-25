@@ -16,16 +16,29 @@ struct FeedView: View {
                 
                 LazyVStack {
                     
-                    ForEach(1 ..< 10) { post in
+                    ForEach(1 ..< 10, id: \.self) { post in
                         PostView()
                     }
                     
+                }
+                .refreshable {
+                    print("Do your refresh work here")
                 }
                 .navigationTitle("iConnect")
                 .navigationBarTitleDisplayMode(.inline)
                 
             }
             .scrollIndicators(.hidden)
+            .toolbar {
+                ToolbarItem {
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "arrow.counterclockwise")
+                            .foregroundStyle(.cyan)
+                    })
+                }
+            }
             
         }
         
@@ -33,5 +46,7 @@ struct FeedView: View {
 }
 
 #Preview {
-    FeedView()
+    NavigationStack {
+        FeedView()
+    }
 }

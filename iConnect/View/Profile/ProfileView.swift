@@ -11,6 +11,18 @@ struct ProfileView: View {
     
     @StateObject var viewModel = ProfileViewModel()
     
+    @State var selectedProfileTab: ProfileTab = .posts
+    @Namespace var animation
+    private var profileTabWidth: CGFloat {
+        let count = CGFloat(ProfileTab.allCases.count)
+        return UIScreen.main.bounds.width / count - 16
+    }
+    
+    
+    private var currentUser: User? {
+        return viewModel.currentUser
+    }
+    
     var body: some View {
         
         NavigationStack {
@@ -22,14 +34,14 @@ struct ProfileView: View {
                     HStack(alignment: .top) {
                         VStack(alignment: .leading, spacing: 12) {
                             
-                            // FULL NAME AND USERNAME
+                            // FULLNAME AND USERNAME
                             VStack(alignment: .leading, spacing: 4) {
                                 
-                                Text("Chris Min")
+                                Text(currentUser?.fullname ?? "")
                                     .font(.title2)
                                     .fontWeight(.semibold)
                                 
-                                Text("chris_min")
+                                Text(currentUser?.username ?? "")
                                     .font(.subheadline)
                                 
                             }
@@ -53,16 +65,56 @@ struct ProfileView: View {
                     
             
                     // FOLLOW BUTTON
-                    Button(action: {
+                    Button {
                         
-                    }, label: {
+                    } label: {
                         Text("Follow")
                             .frame(width: 352, height: 32)
                             .foregroundStyle(.white)
                             .background(.cyan)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                         
-                    })
+                    }
+                    
+                    
+                    // USER CONTENT LIST VIEW
+                    VStack {
+                        HStack {
+                            ForEach(ProfileTab.allCases) { tab in
+                                
+                                VStack {
+                                    Text(tab.title)
+                                        .font(.subheadline)
+                                        .fontWeight(selectedProfileTab == tab ? .semibold : .regular)
+                                    
+                                    if selectedProfileTab == tab {
+                                        Rectangle()
+                                            .foregroundStyle(.cyan)
+                                            .frame(width: profileTabWidth, height: 1)
+                                            .matchedGeometryEffect(id: "item", in: animation)
+                                    } else {
+                                        Rectangle()
+                                            .foregroundStyle(.clear)
+                                            .frame(width: 180, height: 1)
+                                    }
+                                }
+                                .onTapGesture {
+                                    withAnimation(.spring()) {
+                                        selectedProfileTab = tab
+                                    }
+                                }
+                                
+                            }
+                        }
+                        
+                        LazyVStack {
+                            ForEach(0 ... 10, id: \.self) { post in
+                                PostView()
+                            }
+                        }
+                        
+                    }
+                    .padding(.vertical, 10)
                     
                 }
                 

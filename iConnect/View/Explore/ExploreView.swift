@@ -29,6 +29,7 @@ struct ExploreView: View {
                         .padding(.vertical, 4)
                     }
                 }
+                .padding(.top, 10)
                 
             }
             .navigationTitle("Search")

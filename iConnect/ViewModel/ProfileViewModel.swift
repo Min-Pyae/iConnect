@@ -15,7 +15,7 @@ class ProfileViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     init() {
-        
+        setUpSubscribers()
     }
     
     

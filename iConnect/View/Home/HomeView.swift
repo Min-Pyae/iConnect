@@ -74,7 +74,10 @@ struct HomeView: View {
                 .tag(4)
             
         }
-        .onChange(of: selectedTab, { oldValue, newValue in
+//        .onChange(of: selectedTab, { oldValue, newValue in
+//            showUploadView = selectedTab == 2
+//        })
+        .onChange(of: selectedTab, perform: { value in
             showUploadView = selectedTab == 2
         })
         .sheet(

@@ -18,7 +18,6 @@ class UserService {
     init() {
         Task {
             try await fetchCurrentUser()
-
         }
     }
     
@@ -32,5 +31,11 @@ class UserService {
         
         let user = try snapshot.data(as: User.self)
         self.currentUsers = user
+        
+    }
+    
+    
+    func resetCurrentUser() {
+        self.currentUsers = nil
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct UserContentListView: View {
     
     @State var selectedProfileTab: ProfileTab = .posts
-    
+    @StateObject private var viewModel: UserContentListViewModel
     @Namespace var animation
     
     private var profileTabWidth: CGFloat {
@@ -18,6 +18,9 @@ struct UserContentListView: View {
         return UIScreen.main.bounds.width / count - 16
     }
     
+    init(user: User) {
+        self._viewModel =  StateObject(wrappedValue: UserContentListViewModel(user: user))
+    }
     
     var body: some View {
         
@@ -51,8 +54,8 @@ struct UserContentListView: View {
             }
             
             LazyVStack {
-                ForEach(0 ... 10, id: \.self) { post in
-                    PostView()
+                ForEach(viewModel.posts) { post in
+                    PostView(post: post)
                 }
             }
             
@@ -62,5 +65,5 @@ struct UserContentListView: View {
 }
 
 #Preview {
-    UserContentListView()
+    UserContentListView(user: DeveloperPreview.shared.user)
 }

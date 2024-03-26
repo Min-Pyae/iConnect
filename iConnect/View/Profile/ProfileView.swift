@@ -37,7 +37,7 @@ struct ProfileView: View {
                 
                 
                 // USER CONTENT LIST VIEW
-                UserContentListView()
+                UserContentListView(user: user)
                 
             }
             

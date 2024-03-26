@@ -22,5 +22,6 @@ struct Post: Identifiable, Codable {
     let caption: String
     let timestamp: Timestamp
     var likes: Int
+    var didLike: Bool? = false
     var user: User?
 }

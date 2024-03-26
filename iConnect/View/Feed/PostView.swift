@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PostView: View {
+    
+    let post: Post
+    
     var body: some View {
         
         VStack {
@@ -15,21 +18,21 @@ struct PostView: View {
             HStack(alignment: .top) {
                 
                 // PROFILE IMAGE
-                CircularImageView(size: .small)
+                CircularImageView(user: post.user, size: .small)
                 
                 VStack(alignment: .leading, spacing: 5) {
                     
                     HStack {
                         
                         // USER NAME
-                        Text("chrismin")
+                        Text(post.user?.username ?? "")
                             .font(.footnote)
                             .fontWeight(.semibold)
                         
                         Spacer()
                         
                         // TIME
-                        Text("10 m")
+                        Text(post.timestamp.timestampToString())
                             .font(.caption)
                             .foregroundStyle(Color(.systemGray3))
                         
@@ -44,50 +47,32 @@ struct PostView: View {
                     }
                     
                     // POST TEXTS
-                    Text("Hello! I am an iOS Engineer.")
+                    Text(post.caption)
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
                     
-                    // POST ACTIONS
-                    HStack(spacing: 16) {
-                        Button(action: {
-                            
-                        }, label: {
-                            Image(systemName: "heart")
-                        })
-                        
-                        Button(action: {
-                            
-                        }, label: {
-                            Image(systemName: "bubble.right")
-                        })
-                        
-                        Button(action: {
-                            
-                        }, label: {
-                            Image(systemName: "arrow.rectanglepath")
-                        })
-                        
-                        Button(action: {
-                            
-                        }, label: {
-                            Image(systemName: "paperplane")
-                        })
-                    }
-                    .padding(.vertical, 8)
-                    .foregroundStyle(.cyan)
+                    // CONTENT ACTION BUTTONS
+                    ContentActionButtons(post: post)
+                        .padding(.top, 5)
+                        .foregroundStyle(.cyan)
+                    
+                    
                     
                 }
                 
             }
-            .padding()
+            .padding(.horizontal)
+            .padding(.vertical, 10)
             
+            Divider()
+                .padding(.horizontal)
         }
+        
         
     }
 }
 
 #Preview {
-    PostView()
+    PostView(post: DeveloperPreview.shared.post)
 }

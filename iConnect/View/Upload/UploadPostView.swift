@@ -30,7 +30,7 @@ struct UploadPostView: View {
                     
                     // POST CREATION TEXT FIELD
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("chris-min")
+                        Text(user?.username ?? "")
                             .fontWeight(.semibold)
                         
                         

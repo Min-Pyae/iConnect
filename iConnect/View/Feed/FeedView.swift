@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FeedView: View {
+    
+    @StateObject var viewModel = FeedViewModel()
+    
     var body: some View {
         
         NavigationStack {
@@ -16,18 +19,20 @@ struct FeedView: View {
                 
                 LazyVStack {
                     
-                    ForEach(1 ..< 10, id: \.self) { post in
-                        PostView()
+                    ForEach(viewModel.posts) { post in
+                        PostView(post: post)
                     }
                     
                 }
-                .refreshable {
-                    print("Do your refresh work here")
-                }
-                .navigationTitle("iConnect")
-                .navigationBarTitleDisplayMode(.inline)
-                
+            
             }
+            .refreshable {
+                Task {
+                    try await viewModel.fetchPosts()
+                }
+            }
+            .navigationTitle("iConnect")
+            .navigationBarTitleDisplayMode(.inline)
             .scrollIndicators(.hidden)
             .toolbar {
                 ToolbarItem {

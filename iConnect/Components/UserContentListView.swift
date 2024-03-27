@@ -54,9 +54,26 @@ struct UserContentListView: View {
             }
             
             LazyVStack {
-                ForEach(viewModel.posts) { post in
-                    PostView(post: post)
+                
+                switch selectedProfileTab {
+                    
+                case .posts:
+                    
+                    ForEach(viewModel.posts) { post in
+                        PostView(post: post)
+                            .transition(.move(edge: .leading))
+                    }
+                    
+                case .replies:
+                    
+                    ForEach(viewModel.replies) { reply in
+                        ProfilePostReplies(reply: reply)
+                            .transition(.move(edge: .trailing))
+                    }
+                    
                 }
+                
+                
             }
             
         }

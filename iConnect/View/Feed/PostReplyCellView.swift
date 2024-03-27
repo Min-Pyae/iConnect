@@ -1,15 +1,19 @@
 //
-//  PostView.swift
+//  PostReplyCellView.swift
 //  iConnect
 //
-//  Created by Chris Min on 09/03/2024.
+//  Created by Chris Min on 27/03/2024.
 //
 
 import SwiftUI
 
-struct PostView: View {
+struct PostReplyCellView: View {
     
-    let post: Post
+    let reply: PostReply
+    
+    private var user: User? {
+        return reply.user
+    }
     
     var body: some View {
         
@@ -18,22 +22,21 @@ struct PostView: View {
             HStack(alignment: .top) {
                 
                 // PROFILE IMAGE
-                CircularImageView(user: post.user, size: .small)
+                CircularImageView(user: user, size: .small)
                 
                 VStack(alignment: .leading, spacing: 5) {
                     
                     HStack {
                         
                         // USER NAME
-                        Text(post.user?.username ?? "")
+                        Text(user?.username ?? "")
                             .font(.footnote)
-                            .foregroundStyle(.black)
                             .fontWeight(.semibold)
                         
                         Spacer()
                         
                         // TIME
-                        Text(post.timestamp.timestampToString())
+                        Text(reply.timestamp.timestampToString())
                             .font(.caption)
                             .foregroundStyle(Color(.systemGray3))
                         
@@ -48,16 +51,10 @@ struct PostView: View {
                     }
                     
                     // POST TEXTS
-                    Text(post.caption)
+                    Text(reply.replyText)
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
-                        .foregroundStyle(.black)
                     
-                    
-                    // CONTENT ACTION BUTTONS
-                    ContentActionButtons(post: post)
-                        .padding(.top, 5)
-                        .foregroundStyle(.cyan)
                     
                 }
                 .padding(.horizontal, 4)
@@ -70,10 +67,9 @@ struct PostView: View {
                 .padding(.horizontal)
             
         }
-        
     }
 }
 
 #Preview {
-    PostView(post: DeveloperPreview.shared.post)
+    PostReplyCellView(reply: DeveloperPreview.shared.reply)
 }

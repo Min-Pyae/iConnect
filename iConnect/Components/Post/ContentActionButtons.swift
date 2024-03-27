@@ -11,6 +11,8 @@ struct ContentActionButtons: View {
     
     @ObservedObject var viewModel: ContentActionButtonsViewModel
     
+    @State private var showReplySheet = false
+    
     init(post: Post) {
         self.viewModel = ContentActionButtonsViewModel(post: post)
     }
@@ -45,7 +47,7 @@ struct ContentActionButtons: View {
                 })
                 
                 Button(action: {
-                    
+                    showReplySheet.toggle()
                 }, label: {
                     Image(systemName: "bubble.right")
                 })
@@ -63,13 +65,29 @@ struct ContentActionButtons: View {
                 })
             }
             
-            if post.likes > 0 {
-                Text("\(post.likes) likes")
-                    .font(.caption)
-                    .foregroundStyle(.gray)
-                    .padding(.top, 4)
+            // CHECKING IF POST LIKES AND REPLIES EXIST
+            HStack(spacing: 4) {
+                
+                if post.replies > 0 {
+                    Text("\(post.replies) replies")
+                }
+                
+                if post.replies > 0 && post.likes > 0 {
+                    Text(".")
+                }
+                
+                if post.likes > 0 {
+                    Text("\(post.likes) likes")
+                }
+                
             }
+            .font(.caption)
+            .foregroundStyle(.gray)
+            .padding(.top, 4)
             
+        }
+        .sheet(isPresented: $showReplySheet) {
+            PostReplyView(post: post)
         }
         
     }

@@ -20,7 +20,11 @@ struct FeedView: View {
                 LazyVStack {
                     
                     ForEach(viewModel.posts) { post in
-                        PostView(post: post)
+                        
+                        NavigationLink(value: post) {
+                            PostView(post: post)
+                        }
+                        
                     }
                     
                 }
@@ -33,6 +37,9 @@ struct FeedView: View {
             }
             .navigationTitle("iConnect")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: Post.self, destination: { post in
+                PostDetailsView(post: post)
+            })
             .scrollIndicators(.hidden)
             .toolbar {
                 ToolbarItem {

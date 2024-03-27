@@ -71,7 +71,7 @@ struct UploadPostView: View {
                     .foregroundStyle(.cyan)
                 }
                 
-                // CANCEL BUTTON
+                // POST BUTTON
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Post") {
                         Task {

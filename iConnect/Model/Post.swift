@@ -10,7 +10,7 @@ import Firebase
 import FirebaseFirestoreSwift
 
 
-struct Post: Identifiable, Codable {
+struct Post: Identifiable, Codable, Hashable {
     
     @DocumentID var postID: String?
     
@@ -22,6 +22,7 @@ struct Post: Identifiable, Codable {
     let caption: String
     let timestamp: Timestamp
     var likes: Int
+    var replies: Int
     var didLike: Bool? = false
     var user: User?
 }

@@ -41,6 +41,32 @@ struct PostService {
         return posts.sorted(by: { $0.timestamp.dateValue() > $1.timestamp.dateValue() })
     }
     
+    
+    static func fetchPostsReplies(forUser user: User) async throws -> [PostReply] {
+        let snapshot = try await FirestoreConstants
+            .RepliesCollection
+            .whereField("postReplyUserId", isEqualTo: user.id)
+            .getDocuments()
+        
+        var replies = snapshot.documents.compactMap({ try? $0.data(as: PostReply.self) })
+        
+        for index in 0 ..< replies.count {
+            replies[index].user = user
+        }
+        
+        return replies
+    }
+    
+    
+    static func fetchPost(postId: String) async throws -> Post {
+        let snapshot = try await FirestoreConstants
+            .PostCollection
+            .document(postId)
+            .getDocument()
+        
+        return try snapshot.data(as: Post.self)
+    }
+    
 }
 
 

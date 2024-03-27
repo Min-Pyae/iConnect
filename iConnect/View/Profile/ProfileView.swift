@@ -13,7 +13,6 @@ struct ProfileView: View {
     
     var body: some View {
         
-        
         ScrollView {
             
             // USER BIO AND STATS

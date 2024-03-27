@@ -25,6 +25,16 @@
 		F13096D52BB2DF93002BF197 /* ContentActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096D42BB2DF93002BF197 /* ContentActionButtons.swift */; };
 		F13096D72BB2E03E002BF197 /* ContentActionButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096D62BB2E03E002BF197 /* ContentActionButtonsViewModel.swift */; };
 		F13096DA2BB2EB2C002BF197 /* FirestoreConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096D92BB2EB2C002BF197 /* FirestoreConstants.swift */; };
+		F13096DC2BB32A6E002BF197 /* PostReplyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096DB2BB32A6E002BF197 /* PostReplyView.swift */; };
+		F13096DE2BB32F4F002BF197 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096DD2BB32F4F002BF197 /* String.swift */; };
+		F13096E02BB33860002BF197 /* PostReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096DF2BB33860002BF197 /* PostReply.swift */; };
+		F13096E22BB3FE70002BF197 /* PostReplyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096E12BB3FE70002BF197 /* PostReplyService.swift */; };
+		F13096E42BB3FF5B002BF197 /* PostReplyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096E32BB3FF5B002BF197 /* PostReplyViewModel.swift */; };
+		F13096E62BB40855002BF197 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096E52BB40855002BF197 /* PostDetailsView.swift */; };
+		F13096E82BB40ABE002BF197 /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096E72BB40ABE002BF197 /* PostDetailsViewModel.swift */; };
+		F13096EA2BB40C7C002BF197 /* PostReplyCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096E92BB40C7C002BF197 /* PostReplyCellView.swift */; };
+		F13096EC2BB420B0002BF197 /* ProfilePostReplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096EB2BB420B0002BF197 /* ProfilePostReplies.swift */; };
+		F13096EF2BB42AAD002BF197 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13096EE2BB42AAD002BF197 /* ActivityView.swift */; };
 		F15CBBCB2BB1B18100445292 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F15CBBCA2BB1B18100445292 /* FirebaseAuth */; };
 		F15CBBD12BB1B18100445292 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F15CBBD02BB1B18100445292 /* FirebaseDatabase */; };
 		F15CBBD32BB1B18100445292 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F15CBBD22BB1B18100445292 /* FirebaseDatabaseSwift */; };
@@ -78,6 +88,16 @@
 		F13096D42BB2DF93002BF197 /* ContentActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentActionButtons.swift; sourceTree = "<group>"; };
 		F13096D62BB2E03E002BF197 /* ContentActionButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentActionButtonsViewModel.swift; sourceTree = "<group>"; };
 		F13096D92BB2EB2C002BF197 /* FirestoreConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreConstants.swift; sourceTree = "<group>"; };
+		F13096DB2BB32A6E002BF197 /* PostReplyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReplyView.swift; sourceTree = "<group>"; };
+		F13096DD2BB32F4F002BF197 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F13096DF2BB33860002BF197 /* PostReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReply.swift; sourceTree = "<group>"; };
+		F13096E12BB3FE70002BF197 /* PostReplyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReplyService.swift; sourceTree = "<group>"; };
+		F13096E32BB3FF5B002BF197 /* PostReplyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReplyViewModel.swift; sourceTree = "<group>"; };
+		F13096E52BB40855002BF197 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
+		F13096E72BB40ABE002BF197 /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
+		F13096E92BB40C7C002BF197 /* PostReplyCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReplyCellView.swift; sourceTree = "<group>"; };
+		F13096EB2BB420B0002BF197 /* ProfilePostReplies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostReplies.swift; sourceTree = "<group>"; };
+		F13096EE2BB42AAD002BF197 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		F15CBBF52BB1E91200445292 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		F15CBBF82BB1EB1A00445292 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		F15CBBFA2BB1EEDE00445292 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -170,6 +190,9 @@
 			children = (
 				F12449452B9C518000AF1FD8 /* FeedView.swift */,
 				F12449472B9C519D00AF1FD8 /* PostView.swift */,
+				F13096DB2BB32A6E002BF197 /* PostReplyView.swift */,
+				F13096E52BB40855002BF197 /* PostDetailsView.swift */,
+				F13096E92BB40C7C002BF197 /* PostReplyCellView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -216,6 +239,14 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		F13096ED2BB42AA0002BF197 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				F13096EE2BB42AAD002BF197 /* ActivityView.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		F15CBBBC2BB19B0B00445292 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +269,7 @@
 			children = (
 				F15CBBF82BB1EB1A00445292 /* PreviewProvider.swift */,
 				F13096D12BB2D97C002BF197 /* Timestamp.swift */,
+				F13096DD2BB32F4F002BF197 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -245,6 +277,7 @@
 		F19439EB2B9BC070002FA4AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F13096ED2BB42AA0002BF197 /* Activity */,
 				F1F7A7372BB1059B0022E08D /* Upload */,
 				F12C2F472BA21693000D5344 /* Home */,
 				F12449492B9CF69B00AF1FD8 /* Explore */,
@@ -267,6 +300,8 @@
 				F15CBC0D2BB2385800445292 /* FeedViewModel.swift */,
 				F13096CF2BB2D5A3002BF197 /* UserContentListViewModel.swift */,
 				F13096D62BB2E03E002BF197 /* ContentActionButtonsViewModel.swift */,
+				F13096E32BB3FF5B002BF197 /* PostReplyViewModel.swift */,
+				F13096E72BB40ABE002BF197 /* PostDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -277,6 +312,7 @@
 				F17105942BA336A700835E2A /* User.swift */,
 				F1F7A7332BB0FCE70022E08D /* ProfileTab.swift */,
 				F15CBC072BB226E100445292 /* Post.swift */,
+				F13096DF2BB33860002BF197 /* PostReply.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +336,7 @@
 				F124494E2B9CF9DD00AF1FD8 /* UserCell.swift */,
 				F15CBBFC2BB1F06700445292 /* ProfileHeaderView.swift */,
 				F15CBBFE2BB1F22800445292 /* UserContentListView.swift */,
+				F13096EB2BB420B0002BF197 /* ProfilePostReplies.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -311,6 +348,7 @@
 				F17105962BA338A100835E2A /* UserService.swift */,
 				F15CBC022BB20E1300445292 /* ImageUploadService.swift */,
 				F15CBC0B2BB227BF00445292 /* PostService.swift */,
+				F13096E12BB3FE70002BF197 /* PostReplyService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -409,9 +447,14 @@
 			files = (
 				F13096D72BB2E03E002BF197 /* ContentActionButtonsViewModel.swift in Sources */,
 				F12449462B9C518000AF1FD8 /* FeedView.swift in Sources */,
+				F13096DE2BB32F4F002BF197 /* String.swift in Sources */,
 				F124494B2B9CF6AB00AF1FD8 /* ExploreView.swift in Sources */,
+				F13096E02BB33860002BF197 /* PostReply.swift in Sources */,
 				F19439F92B9BC8D9002FA4AB /* AuthenticationTextFieldModifier.swift in Sources */,
 				F1F7A7342BB0FCE70022E08D /* ProfileTab.swift in Sources */,
+				F13096DC2BB32A6E002BF197 /* PostReplyView.swift in Sources */,
+				F13096E22BB3FE70002BF197 /* PostReplyService.swift in Sources */,
+				F13096E42BB3FF5B002BF197 /* PostReplyViewModel.swift in Sources */,
 				F15CBBF92BB1EB1A00445292 /* PreviewProvider.swift in Sources */,
 				F15CBC012BB20CC500445292 /* EditProfileViewModel.swift in Sources */,
 				F13096D52BB2DF93002BF197 /* ContentActionButtons.swift in Sources */,
@@ -427,8 +470,11 @@
 				F13096D02BB2D5A3002BF197 /* UserContentListViewModel.swift in Sources */,
 				F1D478872B9DAC5700E6FE1F /* AuthService.swift in Sources */,
 				F19439F02B9BC0DA002FA4AB /* LoginView.swift in Sources */,
+				F13096EF2BB42AAD002BF197 /* ActivityView.swift in Sources */,
 				F15CBC0C2BB227BF00445292 /* PostService.swift in Sources */,
 				F124494D2B9CF93B00AF1FD8 /* CircularProfileImage.swift in Sources */,
+				F13096E82BB40ABE002BF197 /* PostDetailsViewModel.swift in Sources */,
+				F13096E62BB40855002BF197 /* PostDetailsView.swift in Sources */,
 				F15CBC0E2BB2385800445292 /* FeedViewModel.swift in Sources */,
 				F15CBBF62BB1E91200445292 /* ExploreViewModel.swift in Sources */,
 				F15CBBFB2BB1EEDE00445292 /* ProfileView.swift in Sources */,
@@ -443,8 +489,10 @@
 				F11FD1732B9A72CC00AEAACB /* iConnectApp.swift in Sources */,
 				F15CBBFD2BB1F06700445292 /* ProfileHeaderView.swift in Sources */,
 				F17105952BA336A700835E2A /* User.swift in Sources */,
+				F13096EA2BB40C7C002BF197 /* PostReplyCellView.swift in Sources */,
 				F12C2F492BA2169F000D5344 /* HomeView.swift in Sources */,
 				F19439F22B9BC59D002FA4AB /* RegistrationView.swift in Sources */,
+				F13096EC2BB420B0002BF197 /* ProfilePostReplies.swift in Sources */,
 				F12C2F462BA2159C000D5344 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

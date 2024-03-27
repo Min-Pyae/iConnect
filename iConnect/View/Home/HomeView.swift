@@ -51,7 +51,7 @@ struct HomeView: View {
             
             
             // NOTIFICATION VIEW
-            Text("Tab Content 1")
+            ActivityView()
                 .tabItem {
                     Image(systemName: selectedTab == 3 ? "heart.fill" : "heart")
                         .environment(\.symbolVariants, selectedTab == 3 ? .fill : .none)
